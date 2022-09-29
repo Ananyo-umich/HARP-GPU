@@ -1,0 +1,29 @@
+#ifndef CONFIGURE_HPP
+#define CONFIGURE_HPP
+
+// Eigen library
+#include <Eigen/Core>
+
+using Real = @Real@;
+
+template<typename T1, int T2, int T3>
+using Array = Eigen::Array<T1,T2,T3>;
+
+int const Dynamic = Eigen::Dynamic;
+
+enum {
+  CrossDiskStatusBits = 5,
+  MaxReactants = @MaxReactants@
+};
+
+namespace CrossDiskStatus {
+  enum {
+    SpeciesName = 0,
+    Wave = 1,
+    Reactant = 2,
+    Product = 3,
+    PhotoCrossSection = 4
+  };
+}
+
+#endif
