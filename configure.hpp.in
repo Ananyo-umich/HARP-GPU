@@ -6,8 +6,35 @@
 
 using Real = @Real@;
 
+// ghost zone size (uniform)
+enum {
+  GhostZoneSize = @GhostZoneSize@
+};
+
+// size of array
+enum {
+  NumVapors = @NumVapors@,
+  NumClouds = @NumClouds@,
+  NumParticles = @NumParticles@,
+  NumChemicalSpecies = @NumChemicalSpecies@,
+  NumTracers = @NumTracers@,
+};
+
+// derived sizes
+enum {
+  NumHydros = 5 + NumVapors,
+};
+
+// radiation configuration
+enum {
+  NumStreams = @NumStreams@,
+  NumUVBands = @NumUVBands@,
+  NumVISBands = @NumVISBands@,
+  NumIRBands = @NumIRBands@,
+};
+
 template<typename T1, int T2, int T3>
-using Array = Eigen::Array<T1,T2,T3>;
+using EigenArray = Eigen::Array<T1,T2,T3>;
 
 int const Dynamic = Eigen::Dynamic;
 
