@@ -7,8 +7,6 @@ file(GLOB _tests *.cpp)
 foreach(_test ${_tests})
   get_filename_component(_name ${_test} NAME_WE)
 
-  message(STATUS ${_name})
-
   add_executable(${_name} ${_test})
 
   set_target_properties(${_name}
@@ -19,13 +17,17 @@ foreach(_test ${_tests})
   target_include_directories(${_name}
     SYSTEM PRIVATE
     ${EIGEN3_INCLUDE_DIR}
+    ${CDISORT_INCLUDE_DIR}
     ${CMAKE_SOURCE_DIR}/src
     ${CMAKE_BINARY_DIR}
+    ${ATHENAPP_INCLUDE_DIR}
     )
 
   target_link_libraries(${_name}
     harp
-    netcdf
+    ${NETCDF_LIBRARIES}
+    ${CDISORT_LIBRARY}
+    ${ATHENAPP_LIBRARY}
     )
 
   #install(TARGETS ${_name})

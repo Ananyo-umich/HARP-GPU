@@ -65,9 +65,9 @@ protected:
   std::vector<Real> wavelength_;
   std::vector<Real> wavenumber_;
 
-  Array<int, Dynamic, MaxReactants> reactant_index_;
-  Array<int, Dynamic, MaxReactants> product_index_;
-  Array<Real, Dynamic, Dynamic> cross_section_;
+  EigenArray<int, Dynamic, MaxReactants> reactant_index_;
+  EigenArray<int, Dynamic, MaxReactants> product_index_;
+  EigenArray<Real, Dynamic, Dynamic> cross_section_;
 };
 
 #endif
