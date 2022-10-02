@@ -1,6 +1,6 @@
 #ifndef CROSS_DISKS_HPP
 #define CROSS_DISKS_HPP
 
-#include "kinetics7_cross_disk.hpp"
+#include "crossdisk/kinetics7_cross_disk.hpp"
 
 #endif

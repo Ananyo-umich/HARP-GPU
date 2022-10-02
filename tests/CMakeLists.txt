@@ -20,12 +20,14 @@ foreach(_test ${_tests})
     ${CDISORT_INCLUDE_DIR}
     ${CMAKE_SOURCE_DIR}/src
     ${CMAKE_BINARY_DIR}
+    ${ATHENAPP_INCLUDE_DIR}
     )
 
   target_link_libraries(${_name}
     harp
     ${NETCDF_LIBRARIES}
     ${CDISORT_LIBRARY}
+    ${ATHENAPP_LIBRARY}
     )
 
   #install(TARGETS ${_name})

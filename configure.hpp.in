@@ -28,16 +28,15 @@ enum {
 // radiation configuration
 enum {
   NumStreams = @NumStreams@,
-  NumUVBands = @NumUVBands@,
-  NumVISBands = @NumVISBands@,
-  NumIRBands = @NumIRBands@,
+  NumSpectralBands = @NumSpectralBands@,
+  NumRadiationFlags = 64
 };
 
 template<typename T1, int T2, int T3>
 using EigenArray = Eigen::Array<T1,T2,T3>;
-
 int const Dynamic = Eigen::Dynamic;
 
+// cross disk configuration
 enum {
   CrossDiskStatusBits = 5,
   MaxReactants = @MaxReactants@

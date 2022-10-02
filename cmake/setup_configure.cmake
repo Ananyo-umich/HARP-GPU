@@ -2,7 +2,7 @@
 ## set up model configuration ##
 ################################
 
-# precision
+# float point operation precision
 set(Real float)
 
 # ghost zone size
@@ -17,9 +17,8 @@ set(NumTracers 0)
 
 # radiation stream
 set(NumStreams 4)
-set(NumUVBands 0)
-set(NumVISBands 0)
-set(NumIRBands 0)
+set(NumSpectralBands 0)
 
+# cross disk size
 set(CrossDiskStatusBits 6)
 set(MaxReactants 5)
